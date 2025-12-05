@@ -48,7 +48,7 @@ Clone this repo into your ComfyUI custom_nodes folder:
 
 ```
 cd ComfyUI/custom_nodes
-git clone https://github.com/yourusername/comfyUI-Realtime-Lora
+git clone https://github.com/ShootTheSound/comfyUI-Realtime-Lora
 ```
 
 Restart ComfyUI.

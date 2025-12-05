@@ -1086,106 +1086,6 @@
       "ndPowerEnabled": false
     },
     {
-      "id": 77,
-      "type": "RealtimeLoraTrainer",
-      "pos": [
-        -1553.727619378458,
-        411.1258917561989
-      ],
-      "size": [
-        400,
-        492
-      ],
-      "flags": {},
-      "order": 15,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image_1",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 160
-        },
-        {
-          "name": "caption_1",
-          "shape": 7,
-          "type": "STRING",
-          "link": 161
-        },
-        {
-          "name": "image_2",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 162
-        },
-        {
-          "name": "caption_2",
-          "shape": 7,
-          "type": "STRING",
-          "link": 163
-        },
-        {
-          "name": "image_3",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 164
-        },
-        {
-          "name": "caption_3",
-          "shape": 7,
-          "type": "STRING",
-          "link": 165
-        },
-        {
-          "name": "image_4",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 166
-        },
-        {
-          "name": "caption_4",
-          "shape": 7,
-          "type": "STRING",
-          "link": 167
-        }
-      ],
-      "outputs": [
-        {
-          "name": "lora_path",
-          "type": "STRING",
-          "links": [
-            168,
-            187
-          ]
-        }
-      ],
-      "properties": {
-        "aux_id": "shootthesound/comfyUI-Realtime-Lora",
-        "ver": "7c5d8e9358c7be1a4995a56fede6d8c3fd534616",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.5.1"
-        }
-      },
-      "widgets_values": [
-        4,
-        null,
-        "",
-        "Wan 2.2 Low",
-        "S:\\Auto\\Aitoolkit\\ai-toolkit",
-        "",
-        500,
-        0.0005,
-        16,
-        "Low (768px)",
-        true,
-        "MyWanLowLora"
-      ],
-      "ndSuperSelectorEnabled": false,
-      "ndPowerEnabled": false
-    },
-    {
       "id": 92,
       "type": "ApplyTrainedLora",
       "pos": [
@@ -1382,12 +1282,12 @@
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.3.75",
+        "Node name for S&R": "PrimitiveString",
         "ue_properties": {
           "widget_ue_connectable": {},
           "input_ue_unconnectable": {},
           "version": "7.5.1"
-        },
-        "Node name for S&R": "PrimitiveString"
+        }
       },
       "widgets_values": [
         "<----- Point me at your AI-Toolkit install"
@@ -1436,6 +1336,106 @@
         }
       },
       "widgets_values": []
+    },
+    {
+      "id": 77,
+      "type": "RealtimeLoraTrainer",
+      "pos": [
+        -1553.727619378458,
+        411.1258917561989
+      ],
+      "size": [
+        400,
+        492
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 160
+        },
+        {
+          "name": "caption_1",
+          "shape": 7,
+          "type": "STRING",
+          "link": 161
+        },
+        {
+          "name": "image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 162
+        },
+        {
+          "name": "caption_2",
+          "shape": 7,
+          "type": "STRING",
+          "link": 163
+        },
+        {
+          "name": "image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 164
+        },
+        {
+          "name": "caption_3",
+          "shape": 7,
+          "type": "STRING",
+          "link": 165
+        },
+        {
+          "name": "image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 166
+        },
+        {
+          "name": "caption_4",
+          "shape": 7,
+          "type": "STRING",
+          "link": 167
+        }
+      ],
+      "outputs": [
+        {
+          "name": "lora_path",
+          "type": "STRING",
+          "links": [
+            168,
+            187
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "shootthesound/comfyUI-Realtime-Lora",
+        "ver": "7c5d8e9358c7be1a4995a56fede6d8c3fd534616",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.1"
+        }
+      },
+      "widgets_values": [
+        4,
+        null,
+        "",
+        "Wan 2.2 Low",
+        "S:\\Auto\\Aitoolkit\\ai-toolkit",
+        "",
+        100,
+        0.0006,
+        16,
+        "Low (768px)",
+        true,
+        "MyWanLowLora"
+      ],
+      "ndSuperSelectorEnabled": false,
+      "ndPowerEnabled": false
     }
   ],
   "links": [
@@ -1684,10 +1684,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1.1671841070450009,
+      "scale": 1.5535220464768966,
       "offset": [
-        1647.9018416784384,
-        -52.346318247320596
+        1909.28815542707,
+        -242.88286507268688
       ]
     },
     "frontendVersion": "1.32.9",

@@ -17,7 +17,7 @@ If this node saves you time or helps your workflow, consider [buying me a coffee
 
 **Via Kohya sd-scripts:**
 - SDXL (any checkpoint) - tested with Juggernaut XL Ragnarok, base SDXL will work too
-- SD 1.5 (any checkpoint)
+- SD 1.5 (any checkpoint) - blazingly fast, ~2 mins for 500 steps on a 5090
 
 **Via AI-Toolkit:**
 - Z-Image Turbo

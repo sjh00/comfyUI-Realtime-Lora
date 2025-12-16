@@ -237,22 +237,59 @@ app.registerExtension({
                 origOnNodeCreated.apply(this, arguments);
             }
 
+            // Capture 'this' in closure to prevent race conditions with multiple nodes
+            const node = this;
+
             // After node is created, combine toggle + strength widget pairs, add preset dropdown, set width
             setTimeout(() => {
                 // Guard against running multiple times (e.g., when loading old workflows)
-                if (this._selectiveLoraInitialized) return;
-                this._selectiveLoraInitialized = true;
+                if (node._selectiveLoraInitialized) return;
+                node._selectiveLoraInitialized = true;
 
-                this.combineBlockWidgets();
-                this.addPresetWidget(nodeData.name);
+                node.combineBlockWidgets();
+                node.addPresetWidget(nodeData.name);
 
                 // Double the default width for better slider usability
                 const minWidth = 500;
-                if (this.size[0] < minWidth) {
-                    this.size[0] = minWidth;
-                    this.setDirtyCanvas(true);
+                if (node.size[0] < minWidth) {
+                    node.size[0] = minWidth;
+                    node.setDirtyCanvas(true);
                 }
             }, 50);
+        };
+
+        // Handle workflow restoration - fixes corrupt state when loading saved workflows
+        const origOnConfigure = nodeType.prototype.onConfigure;
+        nodeType.prototype.onConfigure = function(info) {
+            if (origOnConfigure) {
+                origOnConfigure.apply(this, arguments);
+            }
+
+            const node = this;
+
+            // Sanitize all strength widget values during restoration
+            // ComfyUI may deserialize them as strings, causing "Custom" or other corrupt values
+            setTimeout(() => {
+                const config = SELECTIVE_LOADER_PRESETS[nodeData.name];
+                if (!config) return;
+
+                for (const blockName of config.blocks) {
+                    const strWidget = node.widgets.find(w => w.name === blockName + "_str");
+                    if (strWidget) {
+                        // Force to number, default to 1.0 if invalid
+                        let val = parseFloat(strWidget.value);
+                        if (isNaN(val)) val = 1.0;
+                        strWidget.value = val;
+                    }
+                }
+
+                // Ensure Python preset widget stays "Custom" after restoration
+                if (node._pythonPresetWidget) {
+                    node._pythonPresetWidget.value = "Custom";
+                }
+
+                node.setDirtyCanvas(true);
+            }, 100); // Slightly longer delay to ensure widgets are fully restored
         };
 
         // Hook onExecuted to store analysis data when we receive it
@@ -502,6 +539,14 @@ app.registerExtension({
                 pythonPresetWidget.value = "Custom";
                 pythonPresetWidget.draw = function() {};
                 pythonPresetWidget.computeSize = function() { return [0, -4]; };
+                // Store reference to ensure it stays "Custom"
+                node._pythonPresetWidget = pythonPresetWidget;
+
+                // Override the widget's getValue to always return "Custom"
+                const origGetValue = pythonPresetWidget.getValue;
+                pythonPresetWidget.getValue = function() {
+                    return "Custom";
+                };
             }
 
             // Create our JS combo widget for presets

@@ -1576,35 +1576,6 @@
       ]
     },
     {
-      "id": 89,
-      "type": "Note",
-      "pos": [
-        -3081.520195720726,
-        -1814.8686976130239
-      ],
-      "size": [
-        463.233262855058,
-        258.61320970611996
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.5.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "This is a more advanced flow, using TWO analysers and Loaders.  Note that in this one I did not pass the Lora path to the Loader.  I could have, but I wanted to use the Lora Load field in the loader this time, so you see it the other way.\n\n\nLora I am using for this demo are:\n\nhttps://civitai.com/models/1241174/zitil-original-character-glara-h?modelVersionId=2495412\n\nhttps://civitai.com/models/1371819/1920s-horror-movies-lora?modelVersionId=2490859"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 88,
       "type": "ZImageSelectiveLoRALoader",
       "pos": [
@@ -2489,6 +2460,35 @@
       ],
       "ndSuperSelectorEnabled": false,
       "ndPowerEnabled": false
+    },
+    {
+      "id": 89,
+      "type": "Note",
+      "pos": [
+        -3081.520195720726,
+        -1814.8686976130239
+      ],
+      "size": [
+        463.233262855058,
+        258.61320970611996
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "This is a more advanced flow, using TWO analysers and Loaders.  Note that in this one I did not pass the Lora path to the Loader.  I could have, but I wanted to use the Lora Load field in the loader this time, so you see it the other way.\n\n\nLora I am using for this demo are:\n\nhttps://civitai.com/models/1241174/zitil-original-character-glara-h?modelVersionId=2495412\n\nhttps://civitai.com/models/1371819/1920s-horror-movies-lora?modelVersionId=2490859\n\n---\nIf you want to throw me a pint or a coffee, you can here!  https://buymeacoffee.com/lorasandlenses"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
     }
   ],
   "links": [
@@ -2673,10 +2673,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.7247295000000019,
+      "scale": 0.6588450000000021,
       "offset": [
-        3981.5601076233856,
-        2506.5870956791473
+        4252.409517936232,
+        2779.869662207151
       ]
     },
     "frontendVersion": "1.34.8",

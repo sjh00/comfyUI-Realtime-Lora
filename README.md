@@ -9,8 +9,6 @@
 >
 > [![▶ Watch V2 Preview](https://img.youtube.com/vi/C_ZACEIuoVU/0.jpg)](https://www.youtube.com/watch?v=C_ZACEIuoVU)
 
-Capture a face, a style, or a subject from your reference images and apply it to new generations - all within the same workflow. No config files. No command line. Just connect images and go.
-
 ## At a Glance
 
 | Backend | Models | Best For |

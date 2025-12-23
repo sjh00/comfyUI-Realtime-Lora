@@ -7,7 +7,7 @@
 
 > **Version 2 Now Available:** Combined analyzer + selective loader nodes with strength scheduling and LoRA saving!
 >
-> [![▶ Watch V2 Preview](https://img.youtube.com/vi/C_ZACEIuoVU/0.jpg)](https://www.youtube.com/watch?v=C_ZACEIuoVU)
+> [![▶ Watch V2 Demo](https://img.youtube.com/vi/3CdyGxvYeHo/0.jpg)](https://www.youtube.com/watch?v=3CdyGxvYeHo)
 
 ## At a Glance
 
@@ -270,9 +270,9 @@ Workflows are included in the `workflows/` folder, organized by category.
 
 Beyond training, this toolkit includes tools for understanding and fine-tuning how LoRAs affect your generations.
 
-**[▶ Watch Demo: LoRA Analysis & Selective Block Loading](https://www.youtube.com/watch?v=dkEB5i5yBUI)**
+**[▶ Watch Demo: LoRA Analysis & Selective Block Loading](https://www.youtube.com/watch?v=3CdyGxvYeHo)**
 
-[![LoRA Analysis Demo](https://img.youtube.com/vi/dkEB5i5yBUI/0.jpg)](https://www.youtube.com/watch?v=dkEB5i5yBUI)
+[![LoRA Analysis Demo](https://img.youtube.com/vi/3CdyGxvYeHo/0.jpg)](https://www.youtube.com/watch?v=3CdyGxvYeHo)
 
 ### LoRA Loader + Analyzer
 

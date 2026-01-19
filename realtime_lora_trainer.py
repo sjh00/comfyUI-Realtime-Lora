@@ -336,7 +336,7 @@ class RealtimeLoraTrainer:
             low_vram = True
             print(f"[Realtime LoRA] {architecture} requires quantization, enabling low_vram and quantize")
 
-        if vram_mode == "Low (768px)":
+        if "Low (768px)" in vram_mode:
             low_vram = True
             quantize = True
             max_resolution_cap = 768
@@ -346,7 +346,7 @@ class RealtimeLoraTrainer:
             quantize = True
             max_resolution_cap = 1024
             print(f"[Realtime LoRA] Medium mode: low_vram=True, quantize=True, max_res=1024")
-        elif vram_mode == "Min (512px)":
+        elif "Min (512px)" in vram_mode:
             low_vram = True
             quantize = True
             # Only enable layer offloading for architectures that support it (Wan)

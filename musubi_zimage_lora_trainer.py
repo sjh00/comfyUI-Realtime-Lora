@@ -252,7 +252,7 @@ class MusubiZImageLoraTrainer:
                     "step": 4,
                     "tooltip": "LoRA rank/dimension. 16 is recommended for Z-Image."
                 }),
-                "vram_mode": (["Max (1256px)", "Max (1256px) fp8", "Max (1256px) fp8 offload", "Medium (1024px)", "Medium (1024px) fp8", "Medium (1024px) fp8 offload", "Low (768px)", "Min (512px)"], {
+                "vram_mode": (["Max (1256px)", "Max (1256px) fp8", "Max (1256px) fp8 offload", "Medium (1024px)", "Medium (1024px) fp8", "Medium (1024px) fp8 offload", "Low (768px)", "Min (512px)", "Min (512px) no swap"], {
                     "default": saved.get('vram_mode', "Low (768px)"),
                     "tooltip": "VRAM optimization preset. Low/Min always use fp8. Min adds pre-caching for lowest VRAM."
                 }),

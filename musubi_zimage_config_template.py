@@ -133,4 +133,14 @@ MUSUBI_ZIMAGE_VRAM_PRESETS = {
         "blocks_to_swap": 28,
         "resolution": 512,
     },
+    "Min (512px) no swap": {
+        "optimizer": "adamw8bit",
+        "mixed_precision": "bf16",
+        "batch_size": 1,
+        "gradient_checkpointing": True,
+        "fp8_scaled": True,
+        "fp8_llm": True,
+        "blocks_to_swap": 0,
+        "resolution": 512,
+    },
 }
